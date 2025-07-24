@@ -1,0 +1,27 @@
+<meta name="live-transport" content={@live_transport} />
+<meta name="live-path" content={@live_path} />
+
+<main class="p-4 min-h-screen flex flex-col">
+  <%= if Phoenix.Flash.get(@flash, :info) do %>
+    <.notify flash={@flash} />
+  <% end %>
+
+  <header class="flex items-center">
+    <div class="md:w-84 mr-3">
+      <.logo />
+    </div>
+
+    <.nav socket={@socket} page={@page.name} />
+
+    <div class="ml-auto flex items-center space-x-3">
+      <.live_component module={Shortcuts} id="shortcuts" />
+      <.live_component module={Connectivity} id="connectivity" conf={@conf} />
+      <.live_component module={Theme} id="theme" theme={@theme} />
+      <.live_component module={Refresh} id="refresh" refresh={@refresh} />
+    </div>
+  </header>
+
+  {@inner_content}
+
+  <.footer />
+</main>

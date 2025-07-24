@@ -1,0 +1,13 @@
+/*
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+*/
+
+/* This file is for your main application CSS */
+
+/* Kaffy's help text is a <p> and we want it to respect new lines defined with \n  */
+
+p {
+  white-space: pre-line;
+}

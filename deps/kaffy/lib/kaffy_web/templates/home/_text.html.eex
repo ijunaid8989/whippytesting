@@ -1,0 +1,11 @@
+<% width = Map.get(@widget, :width, 6) %>
+<div class="col-md-<%= width %> grid-margin stretch-card">
+    <div class="card shadow">
+        <div class="card-header py-3">
+            <h4><%= @widget.title %></h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text text-justify"><%= @widget.content %></p>
+        </div>
+    </div>
+</div>

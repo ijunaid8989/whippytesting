@@ -1,0 +1,23 @@
+/*
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+*/
+
+/* This file is for your main application CSS */
+
+/* Kaffy's help text is a <p> and we want it to respect new lines defined with \n  */
+p {
+    white-space: pre-line;
+}
+
+textarea {
+    width: 100%;     /* Fill available width */
+    height: auto;    /* Allow flexible height */
+    resize: vertical; /* Let user manually resize vertically */
+    box-sizing: border-box; /* Includes padding in width */ 
+    border-bottom: 1px solid #ebedf2;
+}
+input[type="submit"] {
+    border-bottom: 1px solid #ebedf2;
+}
